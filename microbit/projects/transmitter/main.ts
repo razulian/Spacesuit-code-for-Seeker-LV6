@@ -13,6 +13,7 @@ serial.writeLine("Seeker [LV6]")
 serial.writeLine("Space Suit V1.0")
 serial.writeLine("Remember to change the suitIdentifier in the code!")
 suitIdentifier = 1
+basic.showNumber(suitIdentifier)
 radio.setGroup(70)
 basic.forever(() => {
     heartRatePulse = pins.digitalReadPin(DigitalPin.P2)
@@ -24,7 +25,7 @@ basic.forever(() => {
         heartRateInMilliseconds = input.runningTime() - heartRatePulseTime
         heartRatePulseTime = input.runningTime()
     } else {
-
+    	
     }
     lastHeartRatePulse = heartRatePulse
     soundLevelReadout = soundLevelReadout / 10

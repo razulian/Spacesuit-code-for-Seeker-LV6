@@ -45,12 +45,24 @@
                       </shadow>
                     </value>
                     <next>
-                      <block type="radio_set_group">
-                        <value name="ID">
-                          <shadow type="math_number">
-                            <field name="NUM">70</field>
+                      <block type="device_show_number">
+                        <value name="number">
+                          <shadow type="math_number" id="A9DNOLRQJU]Vd6h835n(">
+                            <field name="NUM">0</field>
                           </shadow>
+                          <block type="variables_get">
+                            <field name="VAR" id="-ZbwJeuKOcElTR9z([%M" variabletype="">suitIdentifier</field>
+                          </block>
                         </value>
+                        <next>
+                          <block type="radio_set_group">
+                            <value name="ID">
+                              <shadow type="math_number">
+                                <field name="NUM">70</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -62,7 +74,7 @@
       </block>
     </statement>
   </block>
-  <block type="device_forever" x="6" y="238">
+  <block type="device_forever" x="20" y="267">
     <statement name="HANDLER">
       <block type="variables_set">
         <field name="VAR" id="#Ite2!yA=O6NLHAv:TuD" variabletype="">heartRatePulse</field>
